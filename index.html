@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan Ideate - SIAKAD Input Nilai Dosen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+        }
+
+        h1, h2, h3 {
+            color: #004d40; /* Dark Teal */
+            border-bottom: 2px solid #e0f2f1;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #004d40;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            color: #00796b; /* Teal */
+            margin-top: 20px;
+        }
+
+        p, ul, ol, table {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #e0f2f1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e0f2f1; /* Light Teal Background */
+            color: #004d40;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #fff9c4; /* Light Yellow */
+            padding: 15px;
+            border-left: 5px solid #ffeb3b;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Laporan Ideate - SIAKAD: Modul Input Nilai untuk Dosen</h1>
+        <h3>Fadel Rahmat Al Ghifary Hamzah (222511010)</h3>
+        <h3>Bisnis Digital Universitas Ma'soem</h3>
+
+        <h2>1. Ringkasan Problem Statement & HMW</h2>
+
+        <h4>Problem Statement:</h4>
+        <p><strong>Proses penginputan nilai oleh dosen</strong> saat ini sering dilakukan secara terpisah (file Excel, email, atau manual di admin), sehingga rentan <strong>human error</strong>, keterlambatan pengumpulan nilai, ketidakkonsistenan perhitungan nilai akhir, dan kurangnya transparansi kepada mahasiswa serta admin.</p>
+
+        <h4>How Might We (HMW):</h4>
+        <ul>
+            <li>Bagaimana membantu dosen menginput nilai dengan cepat dan akurat melalui SIAKAD?</li>
+            <li>Bagaimana memastikan perhitungan nilai akhir (bobots, konversi skala) konsisten dan otomatis?</li>
+            <li>Bagaimana memberikan akses transparan bagi admin dan mahasiswa terhadap status penilaian tanpa mengorbankan privasi?</li>
+            <li>Bagaimana memfasilitasi upload massa (bulk upload) dan validasi format nilai untuk menghemat waktu dosen?</li>
+            <li>Bagaimana mencatat perubahan nilai (audit trail) untuk integritas dan akuntabilitas?</li>
+        </ul>
+
+        <h2>2. Brainstorming Ide</h2>
+        <p>Tujuan: Semua ide solusi yang muncul (minimal 5)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Ide Solusi</th>
+                    <th>Deskripsi Singkat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>Gradebook terintegrasi</td>
+                    <td>Halaman khusus di SIAKAD untuk menginput tugas, kuis, UTS, UAS, dengan bobot masing-masing dan perhitungan otomatis.</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Bulk upload & template Excel/CSV</td>
+                    <td>Menyediakan template dan fitur impor untuk mengupload nilai mahasiswa sekaligus, lengkap dengan validasi format.</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Validasi aturan penilaian</td>
+                    <td>Aturan otomatis (mis. bobot total = 100%, rentang nilai, konversi skala) untuk mencegah kesalahan input.</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Notifikasi & status</td>
+                    <td>Memberi tahu dosen dan admin jika ada nilai yang belum dikirim, serta memberi mahasiswa notifikasi jika nilai final sudah dipublikasikan.</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Audit log & histori perubahan</td>
+                    <td>Mencatat siapa yang mengubah nilai, kapan, dan menyimpan versi sebelumnya untuk keperluan verifikasi.</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Integrasi dengan transkrip & IPK</td>
+                    <td>Otomatis meng-update transkrip sementara dan perhitungan IPK setelah nilai final disetujui.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. Penyaringan & Pemilihan Ide</h2>
+        <h4>Hasil Metode Pemilihan (Young, MoSCoW, Impact/Effort Matrix)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ide Saya</th>
+                    <th>Impact</th>
+                    <th>Effort</th>
+                    <th>Hasil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gradebook terintegrasi</td>
+                    <td>Tinggi</td>
+                    <td>Sedang</td>
+                    <td>Prioritas</td>
+                </tr>
+                <tr>
+                    <td>Bulk upload & template</td>
+                    <td>Tinggi</td>
+                    <td>Rendah</td>
+                    <td>Prioritas</td>
+                </tr>
+                <tr>
+                    <td>Validasi aturan penilaian</td>
+                    <td>Tinggi</td>
+                    <td>Rendah</td>
+                    <td>Prioritas</td>
+                </tr>
+                <tr>
+                    <td>Integrasi transkrip & IPK</td>
+                    <td>Tinggi</td>
+                    <td>Tinggi</td>
+                    <td>Roadmap</td>
+                </tr>
+                <tr>
+                    <td>Audit log & histori</td>
+                    <td>Sedang</td>
+                    <td>Sedang</td>
+                    <td>Boleh</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4. Konsep Solusi Terpilih</h2>
+        <div class="highlight">
+            <h4>Nama Solusi (sementara):</h4>
+            <h3>SIAKAD - Modul Input Nilai & Gradebook Dosen</h3>
+        </div>
+
+        <h4>Deskripsi Singkat:</h4>
+        <ol>
+            <li><strong>Gradebook online</strong> — Dosen bisa membuat komponen penilaian, menginput nilai, melihat perhitungan otomatis, dan menyimpan draf sebelum publikasi.</li>
+            <li><strong>Bulk upload</strong> — Template Excel/CSV untuk mengimpor nilai sekaligus dengan validasi dan feedback kesalahan.</li>
+            <li><strong>Validasi & aturan</strong> — Sistem akan memastikan bobot benar, rentang nilai valid, dan mengingatkan anomali (mis. nilai di luar batas).</li>
+            <li><strong>Audit & approval</strong> — Admin dapat meninjau dan menyetujui nilai final; setiap perubahan tercatat dalam histori.</li>
+            <li><strong>Integrasi</strong> — Setelah disetujui, nilai otomatis masuk ke modul transkrip dan perhitungan IPK.</li>
+        </ol>
+
+        <h4>Target User:</h4>
+        <ul>
+            <li><strong>Dosen, Admin Akademik, Mahasiswa.</strong></li>
+        </ul>
+
+        <h4>Manfaat Utama:</h4>
+        <ol>
+            <li>Meningkatkan <strong>akurasi perhitungan nilai</strong> dan mengurangi human error.</li>
+            <li>Mempercepat proses <strong>pengumpulan dan validasi nilai</strong>.</li>
+            <li>Meningkatkan <strong>transparansi</strong> bagi dosen, admin, dan mahasiswa.</li>
+            <li>Menyediakan <strong>jejak audit</strong> untuk akuntabilitas dan verifikasi.</li>
+        </ol>
+
+        <h4>Sketsa / Alur Sederhana:</h4>
+        <p>Dosen → Buat/Upload Nilai (Gradebook/Bulk Upload) → Validasi Otomatis → Simpan Draf → Publish → Admin Approve → Update Transkrip & Notifikasi Mahasiswa</p>
+
+        <h2>5. Refleksi Kelompok</h2>
+
+        <h4>Apa tantangan saat brainstorming?</h4>
+        <ul>
+            <li>Menentukan fitur wajib vs fitur lanjutan (mis. integrasi IPK vs notifikasi real-time).</li>
+            <li>Menjaga keseimbangan antara kemudahan penggunaan untuk dosen dan kebutuhan validasi administratif.</li>
+        </ul>
+
+        <h4>Mengapa solusi yang dipilih?</h4>
+        <ul>
+            <li>Gradebook + Bulk Upload dianggap solusi paling <strong>efektif</strong> untuk mengurangi waktu administrasi dan kesalahan input.</li>
+            <li>Validasi otomatis memberikan jaminan konsistensi perhitungan nilai akhir.</li>
+            <li>Audit trail meningkatkan <strong>integritas</strong> dan memudahkan penelusuran perubahan nilai jika terjadi sengketa.</li>
+            <li>Solusi ini dapat diimplementasikan bertahap — fitur penting dahulu, integrasi lanjutan di roadmap.</li>
+        </ul>
+
+        <footer>
+            Laporan Ideate ini dibuat sebagai bagian dari tugas/proyek akademik.
+        </footer>
+    </div>
+</body>
+</html>
